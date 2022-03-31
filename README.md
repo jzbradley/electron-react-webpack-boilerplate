@@ -44,7 +44,7 @@ Menubar can be toggled by pressing `ALT` key
 To clone the ERWT boilerplate, you need to run following commands:
 
 ```bash
-git clone --recurse-submodules https://github.com/codesbiome/electron-react-webpack-typescript-2022
+git clone --recurse-submodules https://github.com/codesbiome/electron-react-webpack-boilerplate
 ```
 
 <br>
