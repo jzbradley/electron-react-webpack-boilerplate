@@ -10,7 +10,7 @@ A minimal boilerplate for writing Desktop Applications using [Electron](https://
 
 ## Custom Window Titlebar & Menu
 
-This project now includes custom [Electron Window](https://github.com/guasam/electron-window), Titlebar, Menu Items, Window Controls & application icon etc by default. Menu items and windows controls layout or colors can be customized easily by modifying the `misc/window` modules. The `windows` platform buttons are being used by default in the Titlebar.
+This project now includes custom [Electron Window (JS)](https://github.com/guasam/electron-window-js), Titlebar, Menu Items, Window Controls & application icon etc by default. Menu items and windows controls layout or colors can be customized easily by modifying the `misc/window` modules. The `windows` platform buttons are being used by default in the Titlebar.
 
 Menubar can be toggled by pressing `ALT` key
 
