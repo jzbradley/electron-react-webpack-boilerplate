@@ -1,10 +1,10 @@
 # Electron React Webpack Boilerplate (JavaScript)
 
-ERWT is a minimal boilerplate for writing Desktop Applications using [Electron](https://www.electronjs.org/), [React](https://reactjs.org/), [Webpack](https://webpack.js.org/) & JavaScript. <br /> This project makes use of latest packages and configurations to serve the best environment for development.
+A minimal boilerplate for writing Desktop Applications using [Electron](https://www.electronjs.org/), [React](https://reactjs.org/), [Webpack](https://webpack.js.org/) & JavaScript. <br /> This project makes use of latest packages and configurations to serve the best environment for development.
 
 ## Screenshot
 
-<img src="assets/images/screen_550.jpg" />
+<img src="assets/images/v100.jpg" />
 
 <br>
 

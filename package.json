@@ -1,8 +1,8 @@
 {
   "name": "electron-react-webpack-boilerplate",
   "productName": "Electron Boilerplate",
-  "version": "5.5.0",
-  "description": "Custom boilerplate for writing Desktop Applications using Electron, React, Webpack, TypeScript in 2022",
+  "version": "1.0.0",
+  "description": "Custom boilerplate for writing Desktop Applications using Electron, React, Webpack, Javascript in 2022",
   "main": ".webpack/main",
   "scripts": {
     "start": "cross-env NODE_ENV=development electron-forge start",
@@ -16,11 +16,9 @@
     "minimal",
     "electron-webpack",
     "electron-react",
-    "electron-typescript",
-    "hmr",
+    "hot reload",
     "boilerplate",
-    "2022",
-    "ERWT"
+    "2022"
   ],
   "author": {
     "name": "codesbiome",

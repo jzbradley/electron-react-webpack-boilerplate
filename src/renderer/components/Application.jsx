@@ -10,20 +10,20 @@ const Application = () => {
     <div id='erwt'>
       <div className='header'>
         <div className='main-heading'>
-          <h1>ERWT Boilerplate</h1>
+          <h1>Electron React Webpack Boilerplate</h1>
         </div>
         <div className='main-teaser'>
           <img src={logo} title='Codesbiome' />
           <div>
             Minimal boilerplate for rapid development of Desktop Applications
-            using Electron, React, Typescript and Webpack. To serve the best
+            using Electron, React, Javascript and Webpack. To serve the best
             environment for development, it uses hot-reloading of modules,
             styles and layouts of project
           </div>
         </div>
         <div className='versions'>
           <span>
-            ERWT <span id='erwt-version'></span>
+            Project <span id='erwt-version'></span>
           </span>
           <span>
             Electron <span id='electron-version'></span>
