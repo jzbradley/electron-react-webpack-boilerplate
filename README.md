@@ -48,7 +48,7 @@ Menubar can be toggled by pressing `ALT` key
 
 ## Installation
 
-To clone the ERWT boilerplate, you need to run following commands:
+To clone the boilerplate, you need to run following commands:
 
 ```bash
 git clone --recurse-submodules https://github.com/codesbiome/electron-react-webpack-boilerplate
