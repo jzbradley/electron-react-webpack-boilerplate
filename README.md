@@ -2,8 +2,12 @@
 
 A minimal boilerplate for writing Desktop Applications using [Electron](https://www.electronjs.org/), [React](https://reactjs.org/), [Webpack](https://webpack.js.org/) & JavaScript. <br /> This project makes use of latest packages and configurations to serve the best environment for development.
 
+
+### Typescript Based Project
+
 If you're looking for a boilerplate with Typescript support, find it here :<br>
 [ERWT - Typescript Boilerplate](https://github.com/codesbiome/electron-react-webpack-typescript-2022)
+
 
 ## Screenshot
 
