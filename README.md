@@ -1,129 +1,109 @@
-# Electron React Webpack Boilerplate (JavaScript)
-
-A minimal boilerplate for writing Desktop Applications using [Electron](https://www.electronjs.org/), [React](https://reactjs.org/), [Webpack](https://webpack.js.org/) & JavaScript. <br /> This project makes use of latest packages and configurations to serve the best environment for development.
-
-
-### Typescript Based Project
-
-If you're looking for a boilerplate with Typescript support, find it here :<br>
-[ERWT - Typescript Boilerplate](https://github.com/codesbiome/electron-react-webpack-typescript-2022)
+# This is a personal fork - use at your own risk!
+**See https://github.com/codesbiome/electron-react-webpack-boilerplate for the original.**
 
 
-## Screenshot
+## Project Setup
 
-<img src="assets/images/v100.jpg" />
-
-<br>
-
-## Custom Window Titlebar & Menu
-
-This project now includes custom [Electron Window (JS)](https://github.com/guasam/electron-window-js), Titlebar, Menu Items, Window Controls & application icon etc by default. Menu items and windows controls layout or colors can be customized easily by modifying the `misc/window` modules. The `windows` platform buttons are being used by default in the Titlebar.
-
-Menubar can be toggled by pressing `ALT` key
-
-<center>
-    <img src="assets/images/titlebar_showcase.png" />
-</center>
-
-<br>
-
-## Core Features
-
-- 📐 Custom Window & Titlebar with Menus
-- 🌟 Electron
-- 🌀 JavaScript
-- ⚛️ React
-- 🛶 LESS Loader
-- 🎨 CSS Loader
-- 📸 Image Loader
-- 🆎 Font Loader
-- 🧹 ESLint
-- 📦 Electron Forge
-- 🔱 Webpack & Configuration
-- 🧩 Aliases for project paths
-- 🔥 Hot Module Replacement (Live Reload)
-- 🎁 Package Bundling (Distribution / Release)
-
-<br />
-
-## Installation
-
-To clone the boilerplate, you need to run following commands:
-
-```bash
-git clone --recurse-submodules https://github.com/codesbiome/electron-react-webpack-boilerplate
+1. Clone
+```powershell
+mkdir my-project          <# Create a project folder.          #>
+cd my-project             <# Go to your project directory.     #>
+git clone                 <# clone the boilerplate files       #> `
+    --recurse-submodules  <# including submodules              #> `
+    "https://github.com/jzbradley/electron-react-webpack-boilerplate"
 ```
 
-<br>
-
-Install dependencies using [Yarn](https://www.npmjs.com/package/yarn) or [NPM](https://www.npmjs.com/) :
-
-```bash
-yarn install
+2. Install dependencies
+```powershell
+npm i
 ```
 
-<br />
-
-## Start : Development
-
-To develop and run your application, you need to run following command.
-<br />
-Start electron application for development :
-
-```bash
-yarn start
+3. Test run
+```powershell
+npm run start
 ```
 
-<br />
+If you encounter the following error
+```
+App threw an error during load
+node_modules/electron/dist/resources/default_app.asar/main.js:113
+Error: Cannot find module '@misc/window/titlebarIPC.js'
+```
+ensure that git has initialized the *submodules*.
 
-## Lint : Development
-
-To lint application source code using ESLint via this command :
-
-```bash
-yarn lint
+4. Check code.
+```powershell
+npm run lint
 ```
 
-<br />
+## Features Included
 
-## Package : Production
+### React.js
+[React](https://reactjs.org/) is a component oriented UI framework. It provides a meants of writing templated HTML from within javascript.
+You'll notice that there are several .jsx files in the src folder, which use a specialized version of javascript's syntax which allows you to define your own elements.
 
-Customize and package your Electron app with OS-specific bundles (.app, .exe etc)
+This allows you to break the UI down into a repeatable *Component Heirarchy* (see also "[Thinking in React](https://reactjs.org/docs/thinking-in-react.html)")
 
-```bash
-yarn package
+```jsx
+class KeyButton extends React.Component {
+ render() {
+   return (
+     <button className="square" onClick={() => console.log(this.props.value)}>
+       {this.props.value}
+     </button>
+   );
+ }
+}
+class KeyPad extends React.Component {
+  render() {
+    return (
+        <table>
+        <tr> <td><KeyButton value={7}  /></td> <td><KeyButton value={8}/></td> <td><KeyButton value={9}  /></td> </tr>
+        <tr> <td><KeyButton value={4}  /></td> <td><KeyButton value={5}/></td> <td><KeyButton value={6}  /></td> </tr>
+        <tr> <td><KeyButton value={1}  /></td> <td><KeyButton value={2}/></td> <td><KeyButton value={3}  /></td> </tr>
+        <tr> <td><KeyButton value={"*"}/></td> <td><KeyButton value={0}/></td> <td><KeyButton value={"#"}/></td> </tr>
+        </table>
+    );
+  }
+}
+
 ```
+### Less
+[Less](https://lesscss.org/#overview) (which stands for *Leaner Style Sheets*) is a language extension for CSS. Less is translated into CSS.
+CSS (Cascading Style Sheets) set visual properties that determine how HTML is rendered, but it tends to require a lot of reptetition.
 
-<br />
+Less provides the following features to help make the CSS less redundant:
+- [Variables](https://lesscss.org/#variables)
+- [Mixins](https://lesscss.org/#mixins)
+- [Nesting](https://lesscss.org/#nesting)
+- [Operations](https://lesscss.org/#operations)
+- [Escaping](https://lesscss.org/#escaping)
+- [Functions](https://lesscss.org/#functions)
+- [Namespaces and Accessors](https://lesscss.org/#namespaces-and-accessors)
+- [Maps](https://lesscss.org/#maps)
+- [Scope](https://lesscss.org/#scope)
+- [Comments](https://lesscss.org/#comments)
+- [Importing](https://lesscss.org/#importing)
 
-## Make : Production
+### Webpack
+[Webpack](https://webpack.js.org/) is a static module bundler. Any time one file depends on another, webpack treats this as a dependency. This allows webpack to take non-code assets, such as images or web fonts, and also provide them as dependencies for your application. When webpack processes your application, it starts from a list of modules defined on the command line or in its configuration file. Starting from these entry points, webpack recursively builds a dependency graph that includes every module your application needs, then bundles all of those modules into a small number of bundles - often, only one - to be loaded by the browser.
 
-Making is a way of taking your packaged application and making platform specific distributables like DMG, EXE, or Flatpak files (amongst others).
-
-```bash
-yarn make
-```
-
-<br />
-
-## Publish : Production
-
-Publishing is a way of taking the artifacts generated by the `make` command and sending them to a service somewhere for you to distribute or use as updates. (This could be your update server or an S3 bucket)
-
-```bash
-yarn publish
-```
-
-<br />
-
-## Packager & Makers Configuration
-
-This provides an easy way of configuring your packaged application and making platform specific distributables like DMG, EXE, or Flatpak files.
-
-This configurations file is available in :
-
-```bash
-tools/forge/forge.config.js
-```
+### Electron Forge
+[Electron Forge](https://www.electronforge.io) provides an easy way of building and configuring your packaged application with platform specific distributables like DMG, EXE, or Flatpak files.
+This configurations file is available in [tools/forge/forge.config.js](tools/forge/forge.config.js)
 
 For further information, you can visit [Electron Forge Configuration](https://www.electronforge.io/configuration)
+
+- *Package* your Electron app with OS-specific bundles (.app, .exe etc)
+```bash
+npm run package
+```
+- *Making* is a way of taking your packaged application and making platform specific distributables like DMG, EXE, or Flatpak files (amongst others).
+```bash
+npm run make
+```
+- *Publishing* is a way of taking the artifacts generated by the `make` command and sending them to a service somewhere for you to distribute or use as updates, such as an update server or an S3 bucket.
+```bash
+npm run publish
+```
+
